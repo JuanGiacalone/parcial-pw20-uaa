@@ -1,0 +1,141 @@
+:root{
+    --subtle-red: #b04040;
+    --subtle-yellow: #f5da59;
+    --subtle-green: #00a39f;
+    --subtle-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    --subtle-gray: #778899;
+}
+*{
+    box-sizing: border-box;   
+}
+.header-div
+{
+    position: relative;
+    height:auto;
+    margin-left: 0.55em;
+    margin-top: 0.5em;
+}
+.header-div > button
+{
+    position: absolute;
+    right: 10px;
+    top: 0.01em;
+}
+.header-div > h3
+{
+    width: fit-content;
+}
+body{   
+    
+ 
+    
+}
+
+.mi-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin-top: 0.7em;
+    margin-left: 0px;
+    background-color: var(--subtle-shadow);
+}
+
+.columna{
+
+    flex: 1;
+    height: auto;
+    margin: 0.7em;
+    margin-right: 0.3em;
+    background-color: whitesmoke;
+    border-radius: 0.4em;
+    height: 99vh;
+}
+.head-columna
+{
+    text-align: center;
+    margin-top: 1em;
+}
+.mi-card {
+    padding: 20px;
+    margin: 0.5em;
+    margin-top: 2em;
+    height: auto;
+    border-radius: 0.5em;
+    box-shadow: var(--subtle-shadow);
+}
+
+.mi-card h5
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.mi-card button
+{
+    margin: 0.1em;
+}
+.mi-card .btn-danger
+{
+    margin-left: 4em;
+}
+.mi-card-footer
+{
+    display: flex;
+}
+
+.red
+{
+    background-color: var(--subtle-red);
+}
+.yellow
+{
+    background-color: var(--subtle-yellow);
+}
+.green
+{
+    background-color: var(--subtle-green);
+}
+
+.modal-body input
+{
+    margin-top: 0.4em;
+    font-weight: lighter;
+}
+#titulo
+{
+    font-weight: bold;
+}
+#descripcion
+{
+  padding: 2em 0.5em;
+   
+}
+.modal-body select
+{
+    margin-top: 0.4em;
+    font-weight: bold;
+}
+select option
+{
+    font-weight: bold;
+}
+footer
+{
+    position: relative;
+    margin-left: 0.5em;
+}
+footer p
+{
+    position: absolute;
+}
+
+@media screen and (max-width: 1650px) {
+  
+    .mi-card-footer
+    {
+        flex-direction: column;
+    }
+    .mi-card .btn-danger
+    {
+    margin-left: 0em;
+    }
+}
