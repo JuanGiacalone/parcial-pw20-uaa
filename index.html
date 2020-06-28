@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
       <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -29,23 +36,23 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                <form action="">
+                <form action="" id="form">
                     
                     <input type="text" class= "form-control" name="titulo" id="titulo" placeholder="Titulo" required>
               
                     <input type="text" class= "form-control" name="descripcion" id="descripcion" placeholder="Descripción">
                     <div class="form-group">
                         <select class="form-control" id="etiquetas" required>
-                          <option>Backlog</option>
-                          <option>En progreso</option>
-                          <option>En revisión</option>
-                          <option>En testing</option>
-                          <option>Finalizada</option>
+                          <option value="0">Backlog</option>
+                          <option value="1">En progreso</option>
+                          <option value="2">En revisión</option>
+                          <option value="3">En testing</option>
+                          <option value="4">Finalizada</option>
                         </select>
                         <select class="form-control" id="prioridad" required>
-                            <option class="red">Urgente</option>
-                            <option class="yellow">Requerido</option>
-                            <option class="green">Opcional</option>
+                            <option class="red" value="0">Urgente</option>
+                            <option class="yellow" value="1">Requerido</option>
+                            <option class="green" value="2">Opcional</option>
                           </select>
                       </div>
 
@@ -53,7 +60,7 @@
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Agregar Tarea</button>
+                <button type="button" class="btn btn-primary" id ="agregarTarea">Agregar Tarea</button>
                 </div>
             </div>
             </div>
@@ -61,43 +68,43 @@
     </header>
 
     <div class="mi-container">
-        <div class="columna" id="backlog">
+        <div class="columna" id="columna0">
             <div class="head-columna">
                 <h4>Backlog</h4>
             </div>
-            <div class="mi-card red">
+            <div class="mi-card green">
                 <div class="mi-card-header">
                     <h5>Titulo Tarea</h5>
                 </div>
                 <div class="mi-card-body">
                     <p>La descripcion de la tarea la idea es que el texto pueda ser largo y que se adapte bien segun que tan largo sea</p>
                 </div>
-                <div class="mi-card-footer">
+                <div class="mi-card-footer" id="elfooter">
                     <button type="button" class="btn btn-success">Completada</button>
                     <button type="button" class="btn btn-danger">Eliminar</button>
                 </div>
 
             </div>
         </div>
-        <div class="columna" id="en_progreso">
+        <div class="columna" id="columna1">
             <div class="head-columna">
                 <h4>En Progreso</h4>
             </div>
 
         </div>
-        <div class="columna" id="en_revision">
+        <div class="columna" id="columna2">
             <div class="head-columna">
                 <h4>En revision</h4>
             </div>
 
         </div>
-        <div class="columna" id="en_testing">
+        <div class="columna" id="columna3">
             <div class="head-columna">
                 <h4>En testing</h4>
             </div>
 
         </div>
-        <div class="columna" id="finalizada">
+        <div class="columna" id="columna4">
             <div class="head-columna">
                 <h4>Finalizada</h4>
             </div>
@@ -111,13 +118,9 @@
 
 
 
-
-
     <script src="scripts.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+    <script src="serialize-0.2.js"></script>
 </body>
 <footer>
     <a href="https://github.com/JuanGiacalone">Realizado por Juan Pablo Giacalone.</a>
