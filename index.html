@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    
-    
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -59,7 +57,7 @@
                 </form>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="botonCerrar">Cerrar</button>
                 <button type="button" class="btn btn-primary" id ="agregarTarea">Agregar Tarea</button>
                 </div>
             </div>
@@ -81,7 +79,7 @@
                 </div>
                 <div class="mi-card-footer" id="elfooter">
                     <button type="button" class="btn btn-success">Completada</button>
-                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar</button>
                 </div>
 
             </div>
@@ -118,10 +116,11 @@
 
 
 
-    <script src="scripts.js"></script>
     
-    <script src="serialize-0.2.js"></script>
 </body>
+    <script src="scripts.js"></script>
+    <script src="serialize-0.2.js"></script>
+    
 <footer>
     <a href="https://github.com/JuanGiacalone">Realizado por Juan Pablo Giacalone.</a>
     <p>Parcial PW - UAA - Junio 2020</p>
