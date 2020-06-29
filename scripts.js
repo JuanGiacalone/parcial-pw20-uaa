@@ -2,6 +2,20 @@
 const botonAgregar = document.getElementById("agregarTarea");
 const formTarea = document.getElementById("form");
 
+const alertSuccess = document.createElement("div");
+    alertSuccess.classList.add("alert");
+    alertSuccess.classList.add("alert-success");
+    alertSuccess.classList.add("alert-dismissible");
+    alertSuccess.classList.add("fade");
+    alertSuccess.classList.add("show");
+
+
+    alertSuccess.setAttribute("role","alert");
+    alertSuccess.insertAdjacentText("afterbegin","Tarea creada con exito!");
+
+
+
+
 
 // Extraigo del formulario los datos
 const agregarTarea = () =>
@@ -31,6 +45,7 @@ const agregarTarea = () =>
 //creo el elemento
 const crearElementoTarea = (data) =>
 {
+    
     
     let color = "";
         // 0 = urgente 1 = requerido 2 = opcional / seteo el color indicado/
@@ -108,12 +123,35 @@ const crearElementoTarea = (data) =>
 
         //obtengo el boton de cerrar el modal y simulo un click en el.
     let botonCerrar = document.getElementById("botonCerrar");
-        botonCerrar.click();
+    let botonAgregarm = document.getElementById("botonAgregar");
 
-        modalConfirms();
-}
+       
+    let modalFooter = document.getElementsByClassName("modal-footer")[0];
+    
+        // sacamos los botones del footer del modal
+        modalFooter.removeChild(botonCerrar);
+        modalFooter.removeChild(botonAgregar);
+
+        //agrego la confirmacion de creacion
+        modalFooter.appendChild(alertSuccess);
+        
+ 
+        setTimeout(function(){  // remuevo el boton de alerta , agrego los botones quitados y cierro el modal
+                                modalFooter.removeChild(alertSuccess); 
+                                modalFooter.appendChild(botonAgregar); 
+                                modalFooter.appendChild(botonCerrar);
+                                botonCerrar.click();
+                                                        },750);
+        
+        
+        
+        
+
+ }
 
 // agrego listener para el boton agregarTarea
+
+
 botonAgregar.addEventListener("click",agregarTarea);
 
 //  elimino tarea manejando objetivo y nodos padres e hijo.

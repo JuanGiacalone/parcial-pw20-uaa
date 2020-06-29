@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
@@ -36,9 +37,9 @@
                 <div class="modal-body">
                 <form action="" id="form">
                     
-                    <input type="text" class= "form-control" name="titulo" id="titulo" placeholder="Titulo" required>
+                    <input type="text" class= "form-control" name="titulo" id="titulo" placeholder="Titulo" required autocomplete="off" onfocus="this.value=''">
               
-                    <input type="text" class= "form-control" name="descripcion" id="descripcion" placeholder="Descripción">
+                    <input type="text" class= "form-control" name="descripcion" id="descripcion" placeholder="Descripción" autocomplete="off" onfocus="this.value=''">
                     <div class="form-group">
                         <select class="form-control" id="etiquetas" required>
                           <option value="0">Backlog</option>
@@ -70,19 +71,9 @@
             <div class="head-columna">
                 <h4>Backlog</h4>
             </div>
-            <div class="mi-card green">
-                <div class="mi-card-header">
-                    <h5>Titulo Tarea</h5>
-                </div>
-                <div class="mi-card-body">
-                    <p>La descripcion de la tarea la idea es que el texto pueda ser largo y que se adapte bien segun que tan largo sea</p>
-                </div>
-                <div class="mi-card-footer" id="elfooter">
-                    <button type="button" class="btn btn-success">Completada</button>
-                    <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar</button>
-                </div>
+            
 
-            </div>
+        
         </div>
         <div class="columna" id="columna1">
             <div class="head-columna">
@@ -119,7 +110,6 @@
     
 </body>
     <script src="scripts.js"></script>
-    <script src="serialize-0.2.js"></script>
     
 <footer>
     <a href="https://github.com/JuanGiacalone">Realizado por Juan Pablo Giacalone.</a>

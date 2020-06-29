@@ -8,6 +8,8 @@
 *{
     box-sizing: border-box;   
 }
+
+/*header*/
 .header-div
 {
     position: relative;
@@ -25,20 +27,21 @@
 {
     width: fit-content;
 }
-body{   
-    
- 
-    
-}
+/*header*/
 
+/*contenedor*/
 .mi-container{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    
+    height: 100%;
     margin-top: 0.7em;
     margin-left: 0px;
     background-color: var(--subtle-shadow);
 }
+/*contenedor*/
+
+/*columna*/
 
 .columna{
 
@@ -55,6 +58,10 @@ body{
     text-align: center;
     margin-top: 1em;
 }
+
+/*columna*/
+
+/*carta-tarea*/
 .mi-card {
     padding: 20px;
     margin: 0.5em;
@@ -81,7 +88,10 @@ body{
 {
     display: flex;
 }
+/*carta-tarea*/
 
+
+/* clases de colores*/
 .red
 {
     background-color: var(--subtle-red);
@@ -94,6 +104,12 @@ body{
 {
     background-color: var(--subtle-green);
 }
+
+/* clases de colores*/
+
+
+
+/*config modal*/
 
 .modal-body input
 {
@@ -118,6 +134,9 @@ select option
 {
     font-weight: bold;
 }
+/*config modal*/
+
+/*footer*/
 footer
 {
     position: relative;
@@ -127,6 +146,9 @@ footer p
 {
     position: absolute;
 }
+/*footer*/
+
+/*pequeña responsividad para los botones*/
 
 @media screen and (max-width: 1650px) {
   
